@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Remove Money#to_hash
+
 ## 1.15.0
 
 - Bump money version to ~> 6.16

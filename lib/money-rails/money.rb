@@ -23,7 +23,7 @@ class Money
   end
 
   # This is expected to be called by ActiveSupport when calling as_json an Money object
-  def to_hash
-    { cents: cents, currency_iso: currency.iso_code.to_s }
+  def as_json
+    { 'cents' => cents, 'currency_iso' => currency.iso_code.to_s }
   end
 end

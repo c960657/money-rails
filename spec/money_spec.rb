@@ -31,10 +31,10 @@ describe 'Money overrides' do
     end
   end
 
-  describe '#to_hash' do
+  describe '#as_json' do
     it 'returns a hash with JSON representation' do
-      expect(Money.new(9_99, 'EUR').to_hash).to eq(cents: 9_99, currency_iso: 'EUR')
-      expect(Money.zero('USD').to_hash).to eq(cents: 0, currency_iso: 'USD')
+      expect(Money.new(9_99, 'EUR').as_json).to eq('cents' => 9_99, 'currency_iso' => 'EUR')
+      expect(Money.zero('USD').as_json).to eq('cents' => 0, 'currency_iso' => 'USD')
     end
   end
 end
